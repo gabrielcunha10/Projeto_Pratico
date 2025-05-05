@@ -1,0 +1,9 @@
+inicio = str(input('Bem-vindo ao jogo da forca, digite "COMEÇAR" para iniciar o jogo.\n'))
+if inicio == "COMEÇAR":
+    import random
+    palavras = ["python","java","javascript","php","sql"]
+    palavra = random.choice(palavras)
+    acertos = ["_"] * len(palavra)
+    erros = 0
+    tentativas = 5
+    letras_usadas = set()
