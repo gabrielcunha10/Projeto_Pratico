@@ -7,3 +7,21 @@ if inicio == "COMEÇAR":
     erros = 0
     tentativas = 5
     letras_usadas = set()
+    while erros < tentativas and "_" in acertos:
+        letra = str(input("Digite uma letra:\n").lower())
+    
+        if letra in letras_usadas:
+            print("Você ja utilizou essa letra! Tente novamente.")
+            continue
+
+        letras_usadas.add(letra)
+
+        if letra in palavra:
+            for i in range(len(palavra)):
+                if palavra[i] == letra:
+                    acertos[i] = letra.upper()
+        else:
+            erros+=1
+            print(f"Letra errada! Tente novamente. ({tentativas - erros} Restantes)")    
+
+        print(" ".join(acertos))
