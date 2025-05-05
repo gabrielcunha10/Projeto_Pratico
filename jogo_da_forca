@@ -25,3 +25,10 @@ if inicio == "COMEÇAR":
             print(f"Letra errada! Tente novamente. ({tentativas - erros} Restantes)")    
 
         print(" ".join(acertos))
+    if "_" not in acertos:
+            print("Parabéns, você acertou a palavra corretamente!")
+    else:
+            print(f"Você perdeu! A palavra era:", palavra.upper())
+
+else:
+    print('Verifique se está digitando "COMEÇAR" corretamente.')
